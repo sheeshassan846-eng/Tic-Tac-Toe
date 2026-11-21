@@ -25,6 +25,62 @@ h1 {
   letter-spacing: 0.04em;
 }
 
+.hidden {
+  display: none !important;
+}
+
+/* Mode Selection Screen */
+.mode-select {
+  background-color: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.mode-btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.mode-btn:hover {
+  background-color: #7dd3fc;
+}
+
+.mode-btn.secondary {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.mode-btn.secondary:hover {
+  background-color: #475569;
+}
+
+.mode-btn:active {
+  transform: scale(0.97);
+}
+
+/* Scoreboard & Game Board */
 .scoreboard {
   display: flex;
   justify-content: center;
@@ -87,11 +143,16 @@ h1 {
   border-color: #22c55e;
 }
 
-.reset-btn {
-  background-color: #38bdf8;
-  color: #0f172a;
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.reset-btn,
+.menu-btn {
   border: none;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 1.4rem;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 8px;
@@ -99,6 +160,20 @@ h1 {
   transition: background-color 0.15s ease;
 }
 
+.reset-btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
 .reset-btn:hover {
   background-color: #7dd3fc;
+}
+
+.menu-btn {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.menu-btn:hover {
+  background-color: #475569;
 }
