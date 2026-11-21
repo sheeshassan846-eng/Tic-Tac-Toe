@@ -134,12 +134,12 @@ function getAIMove() {
   scoredMoves.sort((a, b) => b.score - a.score);
 
   if (aiPlaysToWin) {
-    // 70% rounds: pick the strongest move (with slight variety among tied best moves)
+    // 70% rounds: pick the strongest move
     const bestScore = scoredMoves[0].score;
     const bestMoves = scoredMoves.filter((m) => m.score === bestScore);
     return bestMoves[Math.floor(Math.random() * bestMoves.length)].index;
   } else {
-    // 30% rounds: pick a weaker move so the player has a clear path to win
+    // 30% rounds: pick a weaker move so the player can win
     const weakMoves = scoredMoves.slice(1);
     if (weakMoves.length > 0) {
       return weakMoves[Math.floor(Math.random() * weakMoves.length)].index;
