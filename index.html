@@ -10,27 +10,42 @@
   <main class="container">
     <h1>Tic-Tac-Toe</h1>
 
-    <div class="scoreboard">
-      <div class="score-box">Player X: <span id="score-x">0</span></div>
-      <div class="score-box">Draws: <span id="score-draws">0</span></div>
-      <div class="score-box">Player O: <span id="score-o">0</span></div>
+    <!-- Mode Selection Screen -->
+    <div id="mode-select" class="mode-select">
+      <p class="subtitle">Choose a game mode to start</p>
+      <div class="mode-buttons">
+        <button id="btn-ai" class="mode-btn">Play with AI</button>
+        <button id="btn-friend" class="mode-btn secondary">Play with Friend</button>
+      </div>
     </div>
 
-    <p id="status" class="status">Player X's turn</p>
+    <!-- Game Screen (Hidden until a mode is chosen) -->
+    <div id="game-screen" class="game-screen hidden">
+      <div class="scoreboard">
+        <div class="score-box"><span id="label-x">Player X</span>: <span id="score-x">0</span></div>
+        <div class="score-box">Draws: <span id="score-draws">0</span></div>
+        <div class="score-box"><span id="label-o">Player O</span>: <span id="score-o">0</span></div>
+      </div>
 
-    <div class="board" id="board">
-      <button class="cell" data-index="0" aria-label="Cell 1"></button>
-      <button class="cell" data-index="1" aria-label="Cell 2"></button>
-      <button class="cell" data-index="2" aria-label="Cell 3"></button>
-      <button class="cell" data-index="3" aria-label="Cell 4"></button>
-      <button class="cell" data-index="4" aria-label="Cell 5"></button>
-      <button class="cell" data-index="5" aria-label="Cell 6"></button>
-      <button class="cell" data-index="6" aria-label="Cell 7"></button>
-      <button class="cell" data-index="7" aria-label="Cell 8"></button>
-      <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      <p id="status" class="status">Player X's turn</p>
+
+      <div class="board" id="board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+
+      <div class="controls">
+        <button id="reset-btn" class="reset-btn">New Round</button>
+        <button id="menu-btn" class="menu-btn">Change Mode</button>
+      </div>
     </div>
-
-    <button id="reset-btn" class="reset-btn">New Round</button>
   </main>
 
   <script src="script.js"></script>
